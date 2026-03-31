@@ -1,4 +1,4 @@
-# WEB103 Project 4 - *Name of App Here*
+# WEB103 Project 4 - *Car Listings*
 
 Submitted by: **Huyen Huynh**
 
