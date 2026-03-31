@@ -1,0 +1,228 @@
+.create-car-page {
+  min-height: 100vh;
+  width: 100%;
+  background: url("/images/car-bg.jpg") center center / cover no-repeat;
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+.overlay {
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.45);
+  position: relative;
+}
+
+/* Top bar */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 34px;
+  background: rgba(0, 0, 0, 0.72);
+}
+
+.convertible-check {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.convertible-check input {
+  width: 26px;
+  height: 26px;
+  accent-color: #b30012;
+  cursor: pointer;
+}
+
+.tabs {
+  display: flex;
+  gap: 18px;
+}
+
+.tab-btn {
+  background: #9b000d;
+  color: white;
+  border: none;
+  padding: 18px 24px;
+  font-size: 1.8rem;
+  font-weight: 800;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.tab-btn:hover,
+.tab-btn.active {
+  background: #c10012;
+}
+
+.create-controls {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.car-name-input {
+  width: 180px;
+  padding: 14px 16px;
+  background: rgb(255, 255, 255);
+  border: 1px solid #f7f7f7;
+  border-radius: 4px;
+  color: rgb(10, 10, 10);
+  font-size: 1rem;
+}
+
+.car-name-input::placeholder {
+  color: #cfcfcf;
+}
+
+.create-btn {
+  background: #b00012;
+  color: white;
+  border: none;
+  padding: 18px 40px;
+  font-size: 1.6rem;
+  font-weight: 800;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.create-btn:hover {
+  background: #d10016;
+}
+
+/* Main panel */
+.customization-panel {
+  width: 78%;
+  margin: 160px auto 0;
+  background: rgba(209, 187, 187, 0.92);
+  border: 3px solid #f6f5f5;
+  padding: 36px 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  min-height: 220px;
+}
+
+.swatch-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 100px);
+  gap: 18px;
+}
+
+.swatch {
+  width: 200px;
+  height: 88px;
+  border: 2px solid #908e8e;
+  cursor: pointer;
+  transition: transform 0.2s ease, border 0.2s ease;
+}
+
+.swatch:hover {
+  transform: scale(1.03);
+}
+
+.swatch.selected {
+  border: 4px solid white;
+  box-shadow: 0 0 0 2px #b00012;
+}
+
+.done-btn {
+  background: #a30010;
+  color: white;
+  border: none;
+  padding: 18px 28px;
+  font-size: 1.8rem;
+  font-weight: 800;
+  border-radius: 4px;
+  cursor: pointer;
+  align-self: center;
+}
+
+.done-btn:hover {
+  background: #c00014;
+}
+
+/* Price badge */
+.price-badge {
+  position: absolute;
+  bottom: 34px;
+  left: 34px;
+  background: #a50010;
+  color: white;
+  padding: 18px 28px;
+  font-size: 2.5rem;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 2px solid black;
+}
+
+.money-icon {
+  font-size: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .top-bar {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .customization-panel {
+    width: 92%;
+    flex-direction: column;
+  }
+
+  .swatch-grid {
+    grid-template-columns: repeat(2, 140px);
+  }
+}
+
+.roof-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 160px);
+  gap: 20px;
+}
+
+.roof-item {
+  border: 2px solid #ccc;
+  padding: 6px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  position: relative;
+}
+
+.roof-item img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+
+.roof-item:hover {
+  transform: scale(1.05);
+}
+
+.roof-item.selected {
+  border: 3px solid white;
+  box-shadow: 0 0 0 2px red;
+}
+
+.roof-price {
+  position: relative;
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
+  padding: 6px 8px;
+  background: rgba(0, 0, 0, 0.72);
+  color: white;
+  font-weight: 800;
+  text-align: center;
+  border-radius: 4px;
+}
